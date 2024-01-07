@@ -10,6 +10,9 @@ Using Android ARCore - For best user experience of online furniture shopping !
 # Setup enironment of AR Android project
 
 ## 1. Add ARCore libraries
+Add these dependencies to your app's `build.gradle` file:
+
+```gradle
   - ARCore library for augmented reality functionality
       implementation("com.google.ar.core::1.33.0")
     
@@ -21,23 +24,35 @@ Using Android ARCore - For best user experience of online furniture shopping !
 
   - Sceneform animation library for adding animations to AR scenes
       implementation("com.google.ar.sceneform:animation:1.17.1")
-
+```
 
 ## 2. Andriod Manifest permission & features
   - Add camera permission
+    ```gradle
        <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
        <uses-permission android:name="android.permission.CAMERA"/>
+    ```
   - Add OpenGL version
+    ```gradle
        <uses-feature android:glEsVersion="0x00030000" android:required="true"/>
-
+    ```
   - Add hardware ar feature
+    ```gradle
        <uses-feature android:name="android.hardware.camera.ar"/>
+    ```
 
 ## 3. Add AR related meta data for application
-  - <meta-data android:name="com.google.ar.core" android:value="required" />
+  - Add the following metadata tag in the `<application>` section of your AndroidManifest.xml file:
+  - ```manifest.xml
+    <meta-data android:name="com.google.ar.core" android:value="required" />
+    ```
 
 ## 4. layout
-  - make sure to add tag of ARCore sceneform ux (Ex: android:name="com.google.ar.sceneform.ux.ArFragment")
+  - make sure to add tag of ARCore sceneform ux
+  - Ex:
+    ```xml
+    android:name="com.google.ar.sceneform.ux.ArFragment"
+    ```
 
