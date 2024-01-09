@@ -1,6 +1,9 @@
 # AR-Furniture-App
 Using Android ARCore - For best user experience of online furniture shopping !
 
+# What's Sceneview library?
+Built on top of sceneform and we don't need to add openGL to render images while using sceneview
+
 ## What's Sceneform library?
   - This lib provides essential functionality to build augmented reality scenes in Android apps
   - Includes features like - rendering 3D models, handling user interactions, managing AR session
@@ -55,4 +58,5 @@ Add these dependencies to your app's `build.gradle` file:
     ```xml
     android:name="com.google.ar.sceneform.ux.ArFragment"
     ```
+
 
